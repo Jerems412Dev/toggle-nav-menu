@@ -8,4 +8,4 @@ It's a simple toggle nav menu animation
 
 ## Link
 
-Here's a [link](https://hover-interaction.vercel.app/) for Demo website
+Here's a [link](https://toggle-nav-menu.vercel.app/) for Demo website
