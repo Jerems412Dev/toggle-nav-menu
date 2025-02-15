@@ -1,0 +1,80 @@
+.shadow-white {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.bg-opacity {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hover-bg-opacity:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    svg {
+        animation: rotate 0.2s forwards;
+    }
+}
+
+.hover-bg-opacity:not(:hover) {
+    svg {
+        animation: reverse_rotate 0.2s forwards;
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes reverse_rotate {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+.animate-active {
+    span:nth-child(1) {
+        animation: start_span1 .3s forwards;
+    }
+
+    span:nth-child(2) {
+        animation: start_span2 .3s forwards;
+    }
+}
+
+.animate-reverse {
+    span:nth-child(1) {
+        animation: reverse_span1 .3s forwards;
+    }
+
+    span:nth-child(2) {
+        animation: reverse_span2 .3s forwards;
+    }
+}
+
+@keyframes start_span1 {
+    100% {
+        transform: translate3d(0,0.1rem,0) translateY(0.2rem) rotate(45deg);
+    }
+}
+
+@keyframes start_span2 {
+    100% {
+        transform: translate3d(0,-0.1rem,0) translateY(-0.3rem) rotate(-45deg);
+    }
+}
+
+@keyframes reverse_span1 {
+    100% {
+        transform: translate3d(0,0,0) translateY(0) rotate(0);
+    }
+}
+
+@keyframes reverse_span2 {
+    100% {
+        transform: translate3d(0,0,0) translateY(0) rotate(0);
+    }
+}
